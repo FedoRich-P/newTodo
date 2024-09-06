@@ -1,0 +1,15 @@
+.taskItem{
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.isDone {
+    opacity: 0.7;
+    text-decoration: line-through;
+}
+
+.taskItem button {
+    background-color: rgba(190, 25, 25, 0.62);
+}

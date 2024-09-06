@@ -1,0 +1,22 @@
+.todoList {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+    min-height: 250px;
+    border: 2px solid brown;
+    border-radius: 5px;
+}
+
+.buttonsGroup {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dotted brown;
+}
+
+.buttonsGroup button{
+    background-color: #288686;
+}

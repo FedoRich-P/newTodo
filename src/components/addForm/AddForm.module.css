@@ -1,0 +1,27 @@
+.addForm {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    border-bottom: 1px dotted brown;
+}
+
+.addForm input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.addForm button {
+    background-color: green;
+}
+
+.addForm .error {
+    border: 2px solid red;
+}
+
+.formError {
+    margin-bottom: 10px;
+    color: red;
+}
