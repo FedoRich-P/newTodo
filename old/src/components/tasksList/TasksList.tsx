@@ -6,18 +6,19 @@ import {TasksPropsType} from "../../App";
 
 type TasksListProps = {
     tasks: TasksPropsType[];
-    toggleStatus: (id: string) => void;
-    deleteTask: (id: string) => void;
+    toggleStatus: (id: string, todoListId: string) => void;
+    deleteTask: (id: string, todoListId: string) => void;
+    id: string;
 };
 
-export const TasksList = ({tasks, toggleStatus, deleteTask}: TasksListProps) => {
+export const TasksList = ({tasks, toggleStatus, deleteTask, id}: TasksListProps) => {
 
     const tasksListItem = tasks.map(task => {
             const onClickInputHandler = () => {
-                toggleStatus(task.id);
+                toggleStatus(task.id, id);
             }
             const onClickButtonHandler = () => {
-                deleteTask(task.id);
+                deleteTask(task.id, id);
             }
             return (
                 <li className={`${s.taskItem} ${task.completed ? s.isDone : ""}`} key={task.id}>

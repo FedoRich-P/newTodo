@@ -4,10 +4,11 @@ import {Button} from "../button/Button";
 import {ChangeEvent, useState} from "react";
 
 type AddFormProps = {
-    addTask: (value: string) => void;
+    addTask: (value: string, todoListId: string) => void;
+    id: string;
 }
 
-export const AddForm = ({addTask}: AddFormProps) => {
+export const AddForm = ({addTask, id}: AddFormProps) => {
 
     const [inputValue, setInputValue] = useState('');
     const [error, setError] = useState<boolean>(false);
@@ -21,7 +22,7 @@ export const AddForm = ({addTask}: AddFormProps) => {
 
     const onClickHandler = () => {
         if(inputValue) {
-            addTask(inputValue)
+            addTask(inputValue, id)
             setInputValue('')
         } else {
             setError(true)
